@@ -13,7 +13,7 @@ namespace DbExpressions
         /// <summary>
         /// Determines whether the specified <see cref="DbExpression"/> is null.
         /// </summary>
-        /// <param name="dbExpression">The target <see cref="DbExpression"/></param>
+        /// <param name="dbExpression">The target <see cref="DbExpression"/>.</param>
         /// <returns>
         /// <c>true</c> if the specified <see cref="DbExpression"/> is null; otherwise, <c>false</c>.
         /// </returns>
@@ -30,7 +30,7 @@ namespace DbExpressions
         /// </summary>
         /// <typeparam name="TDbExpression">The type of <see cref="DbExpression"/> to search for.</typeparam>
         /// <param name="expression">The <see cref="DbExpression"/> that represents the sub tree for which to start searching.</param>
-        /// <param name="predicate">The <see cref="Func{T,TResult}"/> used to filter the result</param>
+        /// <param name="predicate">The <see cref="Func{T,TResult}"/> used to filter the result.</param>
         /// <returns>A list of <see cref="DbExpression"/> instances that matches the given predicate.</returns>
         public static IEnumerable<TDbExpression> Find<TDbExpression>(this DbExpression expression, Func<TDbExpression, bool> predicate) where TDbExpression : DbExpression
         {
@@ -45,7 +45,7 @@ namespace DbExpressions
         /// <typeparam name="TDbExpression">The type of <see cref="DbExpression"/> to search for.</typeparam>
         /// <param name="dbExpression">The <see cref="DbExpression"/> that represents the sub tree 
         /// for which to start searching.</param>
-        /// <param name="predicate">The <see cref="Func{T,TResult}"/> used to filter the result</param>
+        /// <param name="predicate">The <see cref="Func{T,TResult}"/> used to filter the result.</param>
         /// <param name="replaceWith">The <see cref="Func{T,TResult}"/> used to specify the replacement expression.</param>
         /// <returns>The modified <see cref="DbExpression"/> tree.</returns>
         public static DbExpression Replace<TDbExpression>(this DbExpression dbExpression, Func<TDbExpression, bool> predicate, Func<TDbExpression, DbExpression> replaceWith) where TDbExpression : DbExpression
@@ -58,7 +58,7 @@ namespace DbExpressions
         /// Creates a new <see cref="DbAliasExpression"/> for the target <paramref name="dbExpression"/>.
         /// </summary>
         /// <param name="dbExpression">The <see cref="DbExpression"/> to be aliased.</param>
-        /// <param name="alias">The alias</param>
+        /// <param name="alias">The alias.</param>
         /// <returns>A <see cref="DbAliasExpression"/> instance.</returns>
         public static DbAliasExpression As(this DbExpression dbExpression, string alias)
         {

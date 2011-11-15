@@ -24,11 +24,9 @@
         /// </summary>
         public DbExpression TargetColumns { get; set; }
 
-
         /// <summary>
         /// Gets or sets the <see cref="DbExpression"/> that represents a value or a list of values to be inserted.
         /// </summary>
         public DbExpression Values { get; set; }
-
     }
 }

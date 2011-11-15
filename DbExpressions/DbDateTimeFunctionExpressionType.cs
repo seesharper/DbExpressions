@@ -6,37 +6,37 @@
     public enum DbDateTimeFunctionExpressionType
     {
         /// <summary>
-        /// A node that represents adding the specified number of years to a date/time
+        /// A node that represents adding the specified number of years to a date/time.
         /// </summary>
         AddYears,
        
         /// <summary>
-        /// A node that represents adding the specified number of months to a date/time
+        /// A node that represents adding the specified number of months to a date/time.
         /// </summary>
         AddMonths,
 
         /// <summary>
-        /// A node that represents adding the specified number of days to a date/time
+        /// A node that represents adding the specified number of days to a date/time.
         /// </summary>
         AddDays,
 
         /// <summary>
-        /// A node that represents adding the specified number of hours to a date/time
+        /// A node that represents adding the specified number of hours to a date/time.
         /// </summary>       
         AddHours,
 
         /// <summary>
-        /// A node that represents adding the specified number of minutes to a date/time
+        /// A node that represents adding the specified number of minutes to a date/time.
         /// </summary>
         AddMinutes,
 
         /// <summary>
-        /// A node that represents adding the specified number of seconds to a date/time
+        /// A node that represents adding the specified number of seconds to a date/time.
         /// </summary>
         AddSeconds,
         
         /// <summary>
-        /// A node that represents adding the specified number of milliseconds to a date/time
+        /// A node that represents adding the specified number of milliseconds to a date/time.
         /// </summary>
         AddMilliseconds,
         

@@ -1,5 +1,4 @@
-﻿
-namespace DbExpressions
+﻿namespace DbExpressions
 {
     /// <summary>
     /// Describes the node types for the nodes of an <see cref="DbExpression"/> tree.     
@@ -8,12 +7,12 @@ namespace DbExpressions
     public enum DbFunctionExpressionType
     {
         /// <summary>
-        /// A node that represents a string function 
+        /// A node that represents a string function. 
         /// </summary>
         String,
 
         /// <summary>
-        /// A node that represents a datetime function
+        /// A node that represents a datetime function.
         /// </summary>
         DateTime,
 
@@ -23,7 +22,7 @@ namespace DbExpressions
         Aggregate,
 
         /// <summary>
-        /// A node that represents a mathematical function
+        /// A node that represents a mathematical function.
         /// </summary>
         Mathematical
     }

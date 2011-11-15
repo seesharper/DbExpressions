@@ -13,17 +13,17 @@
         }
         
         /// <summary>
-        /// Gets the <see cref="DbExpression"/> that is executed if the <see cref="Condition"/> evaluates to <b>true</b>
+        /// Gets the <see cref="DbExpression"/> that is executed if the <see cref="Condition"/> evaluates to <b>true</b>.
         /// </summary>
         public DbExpression IfTrue { get; internal set; }
 
         /// <summary>
-        /// Gets the <see cref="DbExpression"/> that is executed if the <see cref="Condition"/> evaluates to <b>false</b>
+        /// Gets the <see cref="DbExpression"/> that is executed if the <see cref="Condition"/> evaluates to <b>false</b>.
         /// </summary>
         public DbExpression IfFalse { get; internal set; }
 
         /// <summary>
-        /// Gets the <see cref="DbExpression"/> that is evaluated 
+        /// Gets the <see cref="DbExpression"/> that is evaluated. 
         /// </summary>
         public DbExpression Condition { get; internal set; }
 

@@ -16,7 +16,6 @@
             DateTimeFunctionExpressionType = dateTimeFunctionExpressionType;
         }
 
-
         /// <summary>
         /// Gets the <see cref="DbDateTimeFunctionExpressionType"/> for this <see cref="DbDateTimeFunctionExpression"/>.
         /// </summary>

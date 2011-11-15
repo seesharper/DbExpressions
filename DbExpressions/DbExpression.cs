@@ -36,7 +36,7 @@ namespace DbExpressions
         /// Implements the operator ==.
         /// </summary>
         /// <param name="leftExpression">The left expression.</param>
-        /// <param name="value">The value to be compared with <paramref name="leftExpression"/></param>
+        /// <param name="value">The value to be compared with <paramref name="leftExpression"/>.</param>
         /// <returns>A <see cref="DbExpression"/> instance.</returns>
         public static DbExpression operator ==(DbExpression leftExpression, object value)
         {
@@ -46,7 +46,7 @@ namespace DbExpressions
         /// <summary>
         /// Implements the operator ==.
         /// </summary>
-        /// <param name="value">The value to be compared with <paramref name="rightExpression"/></param>
+        /// <param name="value">The value to be compared with <paramref name="rightExpression"/>.</param>
         /// <param name="rightExpression">The right expression.</param>
         /// <returns>A <see cref="DbExpression"/> instance.</returns>
         public static DbExpression operator ==(object value, DbExpression rightExpression)
@@ -70,7 +70,7 @@ namespace DbExpressions
         /// <summary>
         /// Implements the operator !=.
         /// </summary>
-        /// <param name="value">The value to be compared with <paramref name="rightExpression"/></param>
+        /// <param name="value">The value to be compared with <paramref name="rightExpression"/>.</param>
         /// <param name="rightExpression">The right expression.</param>
         /// <returns>A <see cref="DbExpression"/> instance.</returns>
         public static DbExpression operator !=(object value, DbExpression rightExpression)
@@ -82,7 +82,7 @@ namespace DbExpressions
         /// Implements the operator !=.
         /// </summary>
         /// <param name="leftExpression">The left expression.</param>
-        /// <param name="value">The value to be compared with <paramref name="leftExpression"/></param>
+        /// <param name="value">The value to be compared with <paramref name="leftExpression"/>.</param>
         /// <returns>A <see cref="DbExpression"/> instance.</returns>
         public static DbExpression operator !=(DbExpression leftExpression, object value)
         {
@@ -115,7 +115,7 @@ namespace DbExpressions
         /// Implements the operator >.
         /// </summary>
         /// <param name="leftExpression">The left expression.</param>
-        /// <param name="value">The value to be compared with <paramref name="leftExpression"/></param>
+        /// <param name="value">The value to be compared with <paramref name="leftExpression"/>.</param>
         /// <returns>A <see cref="DbExpression"/> instance.</returns>
         public static DbExpression operator >(DbExpression leftExpression, object value)
         {
@@ -126,7 +126,7 @@ namespace DbExpressions
         /// Implements the less than operator.
         /// </summary>
         /// <param name="leftExpression">The left expression.</param>
-        /// <param name="value">The value to be compared with <paramref name="leftExpression"/></param>
+        /// <param name="value">The value to be compared with <paramref name="leftExpression"/>.</param>
         /// <returns>A <see cref="DbExpression"/> instance.</returns>
         public static DbExpression operator <(DbExpression leftExpression, object value)
         {
@@ -136,7 +136,7 @@ namespace DbExpressions
         /// <summary>
         /// Implements the less than operator.
         /// </summary>
-        /// <param name="value">The value to be compared with <paramref name="rightExpression"/></param>
+        /// <param name="value">The value to be compared with <paramref name="rightExpression"/>.</param>
         /// <param name="rightExpression">The right expression.</param>
         /// <returns>A <see cref="DbExpression"/> instance.</returns>
         public static DbExpression operator <(object value, DbExpression rightExpression)
@@ -147,7 +147,7 @@ namespace DbExpressions
         /// <summary>
         /// Implements the greater than operator.
         /// </summary>
-        /// <param name="value">The value to be compared with <paramref name="rightExpression"/></param>
+        /// <param name="value">The value to be compared with <paramref name="rightExpression"/>.</param>
         /// <param name="rightExpression">The right expression.</param>
         /// <returns>A <see cref="DbExpression"/> instance.</returns>
         public static DbExpression operator >(object value, DbExpression rightExpression)
@@ -181,7 +181,7 @@ namespace DbExpressions
         /// Implements the greater or equal operator. 
         /// </summary>
         /// <param name="leftExpression">The left expression.</param>
-        /// <param name="value">The value to be compared with <paramref name="leftExpression"/></param>
+        /// <param name="value">The value to be compared with <paramref name="leftExpression"/>.</param>
         /// <returns>A <see cref="DbExpression"/> instance.</returns>
         public static DbExpression operator >=(DbExpression leftExpression, object value)
         {
@@ -192,7 +192,7 @@ namespace DbExpressions
         /// Implements the less than or equal operator.
         /// </summary>
         /// <param name="leftExpression">The left expression.</param>
-        /// <param name="value">The value to be compared with <paramref name="leftExpression"/></param>
+        /// <param name="value">The value to be compared with <paramref name="leftExpression"/>.</param>
         /// <returns>A <see cref="DbExpression"/> instance.</returns>
         public static DbExpression operator <=(DbExpression leftExpression, object value)
         {
@@ -202,7 +202,7 @@ namespace DbExpressions
         /// <summary>
         /// Implements the less than or equal operator.
         /// </summary>
-        /// <param name="value">The value to be compared with <paramref name="rightExpression"/></param>
+        /// <param name="value">The value to be compared with <paramref name="rightExpression"/>.</param>
         /// <param name="rightExpression">The right expression.</param>
         /// <returns>A <see cref="DbExpression"/> instance.</returns>
         public static DbExpression operator <=(object value, DbExpression rightExpression)
@@ -213,7 +213,7 @@ namespace DbExpressions
         /// <summary>
         /// Implements the operator >=.
         /// </summary>
-        /// <param name="value">The value to be compared with <paramref name="rightExpression"/></param>
+        /// <param name="value">The value to be compared with <paramref name="rightExpression"/>.</param>
         /// <param name="rightExpression">The right expression.</param>
         /// <returns>A <see cref="DbExpression"/> instance.</returns>
         public static DbExpression operator >=(object value, DbExpression rightExpression)

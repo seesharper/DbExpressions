@@ -81,16 +81,14 @@ namespace DbExpressions
             }
             throw new ArgumentOutOfRangeException(
                 "dbExpression",
-                string.Format(
-                    "The expression type '{0}' is not supported",
-                    dbExpression.ExpressionType));
+                string.Format("The expression type '{0}' is not supported", dbExpression.ExpressionType));                                        
         }
 
         /// <summary>
-        /// Translates the <paramref name="sqlExpression"/> into a string representation.
+        /// Visits <see cref="DbSqlExpression"/> nodes.
         /// </summary>
-        /// <param name="sqlExpression">The <see cref="DbSqlExpression"/> to translate.</param>
-        /// <returns><see cref="DbExpression"/></returns>
+        /// <param name="sqlExpression">The <see cref="DbSqlExpression"/> to visit</param>
+        /// <returns>A <see cref="Db"/></returns>
         protected virtual DbExpression VisitSqlExpression(DbSqlExpression sqlExpression)
         {
             return sqlExpression;
