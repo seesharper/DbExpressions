@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EFB8519C-78AA-48CC-AF0B-7AFE126BE9A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DbExpressions</RootNamespace>
+    <AssemblyName>DbExpressions</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\DbExpressions.XML</DocumentationFile>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\DbExpressions.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\DbExpressionSettings.cs" />
+    <Compile Include="Configuration\QueryTranslatorElement.cs" />
+    <Compile Include="Configuration\QueryTranslatorElementCollection.cs" />
+    <Compile Include="DbAggregateFunctionExpression.cs" />
+    <Compile Include="DbAggregateFunctionExpressionType.cs" />
+    <Compile Include="DbAliasExpression.cs" />
+    <Compile Include="DbBatchExpression.cs" />
+    <Compile Include="DbBinaryExpression.cs" />
+    <Compile Include="DbBinaryExpressionType.cs" />
+    <Compile Include="DbColumnExpression.cs" />
+    <Compile Include="DbConcatExpression.cs" />
+    <Compile Include="DbConditionalExpression.cs" />
+    <Compile Include="DbConstantExpression.cs" />
+    <Compile Include="DbDateTimeFunctionExpression.cs" />
+    <Compile Include="DbDateTimeFunctionExpressionType.cs" />
+    <Compile Include="DbDeleteExpression.cs" />
+    <Compile Include="DbDeleteQueryExtensions.cs" />
+    <Compile Include="DbExistsExpression.cs" />
+    <Compile Include="DbExpression.cs" />
+    <Compile Include="DbExpressionExtensions.cs" />
+    <Compile Include="DbExpressionFactory.cs" />
+    <Compile Include="DbExpressionFinder.cs" />
+    <Compile Include="DbExpressionReplacer.cs" />
+    <Compile Include="DbExpressionType.cs" />
+    <Compile Include="DbExpressionVisitor.cs" />
+    <Compile Include="DbFunctionExpression.cs" />
+    <Compile Include="DbFunctionExpressionType.cs" />
+    <Compile Include="DbInExpression.cs" />
+    <Compile Include="DbInsertExpression.cs" />
+    <Compile Include="DbInsertQueryExtensions.cs" />
+    <Compile Include="DbJoinExpression.cs" />
+    <Compile Include="DbJoinExpressionType.cs" />
+    <Compile Include="DbListExpression.cs" />
+    <Compile Include="DbMathematicalFunctionExpression.cs" />
+    <Compile Include="DbMathematicalFunctionExpressionType.cs" />
+    <Compile Include="DbOrderByExpression.cs" />
+    <Compile Include="DbOrderByExpressionType.cs" />
+    <Compile Include="DbPrefixExpression.cs" />
+    <Compile Include="DbQuery.cs" />
+    <Compile Include="DbQueryExpression.cs" />
+    <Compile Include="DbQueryExtensions.cs" />
+    <Compile Include="DbQueryTranslator.cs" />
+    <Compile Include="DbQueryTranslatorFactory.cs" />
+    <Compile Include="DbQueryType.cs" />
+    <Compile Include="DbSelectExpression.cs" />
+    <Compile Include="DbSelectQueryExtensions.cs" />
+    <Compile Include="DbSqlExpression.cs" />
+    <Compile Include="DbStringFunctionExpression.cs" />
+    <Compile Include="DbStringFunctionExpressionType.cs" />
+    <Compile Include="DbTableExpression.cs" />
+    <Compile Include="DbTranslateResult.cs" />
+    <Compile Include="DbUnaryExpression.cs" />
+    <Compile Include="DbUnaryExpressionType.cs" />
+    <Compile Include="DbUpdateExpression.cs" />
+    <Compile Include="DbUpdateQueryExtensions.cs" />
+    <Compile Include="MySqlQueryTranslator.cs" />
+    <Compile Include="OracleQueryTranslator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLiteQueryTranslator.cs" />
+    <Compile Include="SqlQueryTranslator.cs" />
+    <Compile Include="StringBuilderExtensions.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

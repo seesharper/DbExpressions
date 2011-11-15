@@ -1,0 +1,12 @@
+[Oo]bj/
+[Bb]in/
+_ReSharper*
+/TestResults
+*.suo
+*.user
+*.nupkg
+*.cs_
+*.vsp
+*.psess
+StyleCopViolations.xml
+StyleCop.Cache
