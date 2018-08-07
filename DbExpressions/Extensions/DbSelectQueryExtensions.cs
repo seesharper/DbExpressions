@@ -8,9 +8,9 @@ namespace DbExpressions
     /// </summary>
     public static class DbSelectQueryExtensions
     {
-        
+
         private static readonly DbExpressionFactory DbExpressionFactory = new DbExpressionFactory();
-                
+
         /// <summary>
         /// Specifies the projecton of the query.
         /// </summary>
@@ -19,7 +19,7 @@ namespace DbExpressions
         /// <returns></returns>
         public static DbSelectQuery Select(this DbSelectQuery dbSelectQuery, params Func<DbExpressionFactory, DbExpression>[] expressionSelector)
         {
-            return Select(dbSelectQuery, DbExpressionFactory.List(expressionSelector.Select(e => e(DbExpressionFactory))));                        
+            return Select(dbSelectQuery, DbExpressionFactory.List(expressionSelector.Select(e => e(DbExpressionFactory))));
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace DbExpressions
         {
             var dbExpression = (DbExpression)DbExpressionFactory.MakeOrderBy(orderByExpressionType, expressionSelector(DbExpressionFactory));
             if (!dbSelectQuery.QueryExpression.OrderByExpression.IsNull())
-                dbExpression = DbExpressionFactory.List(new[] { dbSelectQuery.QueryExpression.FromExpression, dbExpression });
+                dbExpression = DbExpressionFactory.List(new[] { dbSelectQuery.QueryExpression.OrderByExpression, dbExpression });
             dbSelectQuery.QueryExpression.OrderByExpression = dbExpression;
             return dbSelectQuery;
         }
@@ -83,7 +83,7 @@ namespace DbExpressions
         /// <param name="expressionSelector">A function used to specify an element in the 'ORDER BY' clause.</param>
         public static DbQuery<DbSelectExpression> OrderByAscending(this DbQuery<DbSelectExpression> dbSelectQuery, Func<DbExpressionFactory, DbExpression> expressionSelector)
         {
-            return OrderBy(dbSelectQuery,expressionSelector, DbOrderByExpressionType.Ascending);
+            return OrderBy(dbSelectQuery, expressionSelector, DbOrderByExpressionType.Ascending);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace DbExpressions
         /// <param name="expressionSelector">A function used to specify an element in the 'ORDER BY' clause.</param>
         public static DbQuery<DbSelectExpression> OrderByDescending(this DbQuery<DbSelectExpression> dbSelectQuery, Func<DbExpressionFactory, DbExpression> expressionSelector)
         {
-            return OrderBy(dbSelectQuery,expressionSelector, DbOrderByExpressionType.Ascending);
+            return OrderBy(dbSelectQuery, expressionSelector, DbOrderByExpressionType.Ascending);
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace DbExpressions
         {
             dbSelectQuery.QueryExpression.TakeExpression = DbExpressionFactory.Constant(count);
             return dbSelectQuery;
-            
+
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace DbExpressions
             dbSelectQuery.QueryExpression.SkipExpression = DbExpressionFactory.Constant(count);
             return dbSelectQuery;
         }
-     
+
         /// <summary>
         /// Collects data across multiple records and group the results by one or more columns.
         /// </summary>
@@ -156,7 +156,7 @@ namespace DbExpressions
         {
             var dbExpression = expressionSelector(DbExpressionFactory);
             if (!dbSelectQuery.QueryExpression.GroupByExpression.IsNull())
-                dbExpression = DbExpressionFactory.List(new[] { dbSelectQuery.QueryExpression.FromExpression, dbExpression });
+                dbExpression = DbExpressionFactory.List(new[] { dbSelectQuery.QueryExpression.GroupByExpression, dbExpression });
             dbSelectQuery.QueryExpression.GroupByExpression = dbExpression;
             return dbSelectQuery;
         }
@@ -171,11 +171,11 @@ namespace DbExpressions
         {
             var dbExpression = expressionSelector(DbExpressionFactory);
             if (!dbSelectQuery.QueryExpression.HavingExpression.IsNull())
-                dbExpression = DbExpressionFactory.List(new[] { dbSelectQuery.QueryExpression.FromExpression, dbExpression });
+                dbExpression = DbExpressionFactory.List(new[] { dbSelectQuery.QueryExpression.HavingExpression, dbExpression });
             dbSelectQuery.QueryExpression.HavingExpression = dbExpression;
             return dbSelectQuery;
         }
-        
+
 
 
 
