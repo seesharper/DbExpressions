@@ -10,3 +10,4 @@ _ReSharper*
 *.psess
 StyleCopViolations.xml
 StyleCop.Cache
+.vs/*
