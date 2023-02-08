@@ -103,8 +103,8 @@ namespace DbExpressions
         {
             var leftExpression = Visit(binaryExpression.LeftExpression);
             var rightExpression = Visit(binaryExpression.RightExpression);
-            if (!leftExpression.Equals(binaryExpression.LeftExpression) ||
-                !rightExpression.Equals(binaryExpression.RightExpression))
+            if (!ReferenceEquals(leftExpression, binaryExpression.LeftExpression) ||
+                !ReferenceEquals(rightExpression, binaryExpression.RightExpression))
             {
                 return ExpressionFactory.MakeBinary(binaryExpression.BinaryExpressionType, leftExpression, rightExpression);
             }
